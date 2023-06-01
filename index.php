@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
   <head>
-    <title>Not Quiet RARBG</title>
+    <title>Not Quite RARBG</title>
     <link href="https://slidemovies.org/FA6Pro/css/all.min.css" rel="stylesheet">
     <style>
       button {
@@ -49,8 +49,17 @@
     <h1 style="position:absolute;top:-10px;color:#3760BB;text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;">Not Quite</h1>
     <img src="/logo.png">
     <br><br><br>
-    <div style="text-align:center;">
-      <div style="background-color:white;display:inline-block;border-radius:5px;padding:15px;">
+    <div style="text-align:center;position:relative;">
+      <div style="background-color:white;display:inline-block;border-radius:5px;padding:15px;position:relative;">
+          <button style="position:absolute;left:-110px;width:110px;"><i class="fas fa-house"></i> Home</button>
+          <button style="position:absolute;left:-110px;width:110px;top:50px;"><i class="fa-solid fa-film"></i> Movies</button>
+          <button style="position:absolute;left:-110px;width:110px;top:85px;"><i class="fa-solid fa-tv"></i> TV Shows</button>
+          <button style="position:absolute;left:-110px;width:110px;top:120px;"><i class="fa-solid fa-game-console-handheld"></i> Games</button>
+          <button style="position:absolute;left:-110px;width:110px;top:155px;"><i class="fa-solid fa-music"></i> Music</button>
+          <button style="position:absolute;left:-110px;width:110px;top:190px;"><i class="fa-solid fa-a"></i> Anime</button>
+          <button style="position:absolute;left:-110px;width:110px;top:225px;"><i class="fa-brands fa-app-store-ios"></i> Apps</button>
+          <button style="position:absolute;left:-110px;width:110px;top:295px;"><i class="fa-solid fa-question"></i> Other</button>
+        
         <h3>Recommended Torrents:</h3>
         ...Placeholder..<br><br>
         <div style="background-color:#D3DDE7;padding:15px;width:600px;display:inline-block;border-radius:3px;">
@@ -116,7 +125,7 @@
 
         <br><br><br><br>
         <?php
-          $jsonData = json_decode(file_get_contents("https://api--nqr.slidemovies.org/"))->data;
+          $jsonData = json_decode(file_get_contents("https://rabrg.notslidemoviesss.repl.co/"))->data;
         ?>
 
         <table>
