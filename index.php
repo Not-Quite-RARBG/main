@@ -42,6 +42,9 @@
         border: 1px solid white;
         padding: 5px;
       }
+      button > a {
+        color: white;
+      }
     </style>
   </head>
   <body style="background-color:black;padding:30px;font-family:monospace;">
@@ -51,7 +54,7 @@
     <br><br><br>
     <div style="text-align:center;position:relative;">
       <div style="background-color:white;display:inline-block;border-radius:5px;padding:15px;position:relative;">
-          <button style="position:absolute;left:-110px;width:110px;"><i class="fas fa-house"></i> Home</button>
+          <button style="position:absolute;left:-110px;width:110px;"><a href="/"><i class="fas fa-house"></i> Home</a></button>
           <button style="position:absolute;left:-110px;width:110px;top:50px;"><a href="/cat/movies/"><i class="fa-solid fa-film"></i> Movies</a></button>
           <button style="position:absolute;left:-110px;width:110px;top:85px;"><a href="/cat/tv%20series/"><i class="fa-solid fa-tv"></i> TV</a></a></button>
           <button style="position:absolute;left:-110px;width:110px;top:120px;"><a href="/cat/games/"><i class="fa-solid fa-game-console-handheld"></i> Games</a></button>
