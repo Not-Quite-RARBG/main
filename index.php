@@ -45,6 +45,9 @@
       button > a {
         color: white;
       }
+      button > a:hover {
+        color: white !important;
+      }
     </style>
   </head>
   <body style="background-color:black;padding:30px;font-family:monospace;">
