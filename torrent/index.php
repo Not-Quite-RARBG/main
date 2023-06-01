@@ -68,8 +68,9 @@
           <button style="position:absolute;left:-110px;width:110px;top:260px;"><a href="/cat/other/"><i class="fa-solid fa-question"></i> Other</a></button>
 
         <?php
-          $id = end(explode("/", $_SERVER['REQUEST_URI']));
-          $jsonData = json_decode(file_get_contents("https://api--nqr.slidemovies.org/torrent.php?id=zr5d14e"));
+          $url_parts = explode("/", $_SERVER['REQUEST_URI']);
+          $id = end($url_parts);
+          $jsonData = json_decode(file_get_contents("https://api--nqr.slidemovies.org/torrent.php?id=$id"));
         ?>
 
         <h3><?php echo $jsonData->name; ?></h3>
@@ -105,7 +106,7 @@
                   echo $mtdb_data->vote_average;
                 }
                 else if (str_contains($jsonData->cat, "tv")) {
-                  $tmdb_data = json_decode(file_get_contents("https://api.themoviedb.org/3/tv/$jsonData->imdb_id?api_key=your_api_key&language=en-US&page=1"));
+                  $tmdb_data = json_decode(file_get_contents("https://api.themoviedb.org/3/tv/$jsonData->imdb_id/external_ids?api_key=your_api_key&language=en-US&page=1"));
                   echo $mtdb_data->vote_average;
                 }
               }
