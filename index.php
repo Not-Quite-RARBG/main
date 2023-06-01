@@ -53,12 +53,12 @@
       <div style="background-color:white;display:inline-block;border-radius:5px;padding:15px;position:relative;">
           <button style="position:absolute;left:-110px;width:110px;"><i class="fas fa-house"></i> Home</button>
           <button style="position:absolute;left:-110px;width:110px;top:50px;"><i class="fa-solid fa-film"></i> Movies</button>
-          <button style="position:absolute;left:-110px;width:110px;top:85px;"><i class="fa-solid fa-tv"></i> TV Shows</button>
+          <button style="position:absolute;left:-110px;width:110px;top:85px;"><i class="fa-solid fa-tv"></i> TV</button>
           <button style="position:absolute;left:-110px;width:110px;top:120px;"><i class="fa-solid fa-game-console-handheld"></i> Games</button>
           <button style="position:absolute;left:-110px;width:110px;top:155px;"><i class="fa-solid fa-music"></i> Music</button>
           <button style="position:absolute;left:-110px;width:110px;top:190px;"><i class="fa-solid fa-a"></i> Anime</button>
           <button style="position:absolute;left:-110px;width:110px;top:225px;"><i class="fa-brands fa-app-store-ios"></i> Apps</button>
-          <button style="position:absolute;left:-110px;width:110px;top:295px;"><i class="fa-solid fa-question"></i> Other</button>
+          <button style="position:absolute;left:-110px;width:110px;top:260px;"><i class="fa-solid fa-question"></i> Other</button>
         
         <h3>Recommended Torrents:</h3>
         ...Placeholder..<br><br>
