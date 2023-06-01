@@ -1,4 +1,4 @@
-  <!doctype html>
+<!doctype html>
 <html>
   <head>
     <title>Not Quite RARBG</title>
@@ -76,7 +76,7 @@
         <h3><?php echo $jsonData->name; ?></h3>
         <br><br>
 
-        <table style="width:600px;display:block;">
+        <table style="display:block;">
           <tr>
             <th>
               Torrent:
@@ -98,17 +98,10 @@
             <td><?php echo $jsonData->imdb_id; ?></td>
           </tr>
           <tr>
-            <th>TMDb Score:</th>
+            <th>IMDb Score:</th>
             <td><?php 
               if ($jsonData->imdb_id) {
-                if (str_contains($jsonData->cat, "movies")) {
-                  $tmdb_data = json_decode(file_get_contents("https://api.themoviedb.org/3/movie/$jsonData->imdb_id?api_key=your_api_key&language=en-US&page=1"));
-                  echo $mtdb_data->vote_average;
-                }
-                else if (str_contains($jsonData->cat, "tv")) {
-                  $tmdb_data = json_decode(file_get_contents("https://api.themoviedb.org/3/tv/$jsonData->imdb_id/external_ids?api_key=your_api_key&language=en-US&page=1"));
-                  echo $mtdb_data->vote_average;
-                }
+                echo '<span class="imdbRatingPlugin" data-user="ur134494520" data-title="'.$jsonData->imdb_id.'" data-style="p3"><a target="_blank" href="https://www.imdb.com/title/'.$jsonData->imdb_id.'/?ref_=plg_rt_1"><img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png" alt="IMDb Rating" /></a></span>';
               }
             ?></td>
           </tr>
@@ -392,5 +385,7 @@ http://bt.endpot.com:80/announce
         
       </div>
     </div>
+    <script>(function(d,s,id){var js,stags=d.getElementsByTagName(s)[0];if(d.getElementById(id)){return;}js=d.createElement(s);js.id=id;js.src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/js/rating.js";stags.parentNode.insertBefore(js,stags);})(document,"script","imdb-rating-api");
+    </script>
   </body>
 </html>
