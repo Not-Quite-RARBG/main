@@ -3,6 +3,8 @@ Not Quite RARBG's main website.
 
 https://not-quite-rarbg.slidemovies.org
 
+https://discord.gg/rQx6tZhP6W
+
 Couldn't be possible without https://www.reddit.com/r/PiratedGames/comments/13wjasv/comment/jmd5sbf/?utm_source=share&utm_medium=web2x&context=3
 
 # About
