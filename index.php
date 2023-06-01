@@ -131,7 +131,7 @@
 
         <br><br><br><br>
         <?php
-          $jsonData = json_decode(file_get_contents("https://rabrg.notslidemoviesss.repl.co/"))->data;
+          $jsonData = json_decode(file_get_contents("https://api--nqr.slidemovies.org/"))->data;
         ?>
 
         <table>
