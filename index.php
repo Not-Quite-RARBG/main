@@ -52,13 +52,13 @@
     <div style="text-align:center;position:relative;">
       <div style="background-color:white;display:inline-block;border-radius:5px;padding:15px;position:relative;">
           <button style="position:absolute;left:-110px;width:110px;"><i class="fas fa-house"></i> Home</button>
-          <button style="position:absolute;left:-110px;width:110px;top:50px;"><i class="fa-solid fa-film"></i> Movies</button>
-          <button style="position:absolute;left:-110px;width:110px;top:85px;"><i class="fa-solid fa-tv"></i> TV</button>
-          <button style="position:absolute;left:-110px;width:110px;top:120px;"><i class="fa-solid fa-game-console-handheld"></i> Games</button>
-          <button style="position:absolute;left:-110px;width:110px;top:155px;"><i class="fa-solid fa-music"></i> Music</button>
-          <button style="position:absolute;left:-110px;width:110px;top:190px;"><i class="fa-solid fa-a"></i> Anime</button>
-          <button style="position:absolute;left:-110px;width:110px;top:225px;"><i class="fa-brands fa-app-store-ios"></i> Apps</button>
-          <button style="position:absolute;left:-110px;width:110px;top:260px;"><i class="fa-solid fa-question"></i> Other</button>
+          <button style="position:absolute;left:-110px;width:110px;top:50px;"><a href="/cat/movies/"><i class="fa-solid fa-film"></i> Movies</a></button>
+          <button style="position:absolute;left:-110px;width:110px;top:85px;"><a href="/cat/tv%20series/"><i class="fa-solid fa-tv"></i> TV</a></a></button>
+          <button style="position:absolute;left:-110px;width:110px;top:120px;"><a href="/cat/games/"><i class="fa-solid fa-game-console-handheld"></i> Games</a></button>
+          <button style="position:absolute;left:-110px;width:110px;top:155px;"><a href="/cat/music/"><i class="fa-solid fa-music"></i> Music</a></button>
+          <button style="position:absolute;left:-110px;width:110px;top:190px;"><a href="/cat/anime/"><i class="fa-solid fa-a"></i> Anime</a></button>
+          <button style="position:absolute;left:-110px;width:110px;top:225px;"><a href="/cat/apps/"><i class="fa-brands fa-app-store-ios"></i> Apps</a></button>
+          <button style="position:absolute;left:-110px;width:110px;top:260px;"><a href="/cat/other/"><i class="fa-solid fa-question"></i> Other</a></button>
         
         <h3>Recommended Torrents:</h3>
         ...Placeholder..<br><br>
