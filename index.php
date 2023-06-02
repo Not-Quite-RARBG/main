@@ -145,7 +145,7 @@
 
       <br><br><br><br>
       <?php
-      $jsonData = json_decode(file_get_contents($api_url))->data;
+      $jsonData = json_decode(file_get_contents($api_url.'/?key='.$api_key))->data;
       ?>
 
       <table>
