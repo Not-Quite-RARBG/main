@@ -1,7 +1,7 @@
 # main
 Not Quite RARBG's main website.
 
-[not-quite-rarbg.slidemovies.org
+[nq-rarbg.slidemovies.org
 ](http://nq-rarbg.slidemovies.org/)
 
 https://discord.gg/rQx6tZhP6W
