@@ -199,35 +199,36 @@
 
             switch ($catLink) {
               case str_contains($catLink, "xvid"):
-                  $catLink = 'xvid.gif';
+                  $catLink = 'images/categories/cat_new14.gif';
                   $catDetails = "/XVid";
                   break;
               case str_contains($catLink, "x264"):
-                  $catLink = 'x264.gif';
+                  $catLink = 'images/categories/cat_new17.gif';
                   $catDetails = "/X264";
                   break;
               case str_contains($catLink, "tv"):
-                  $catLink = 'tv.gif';
-                  $catDetails = "";
+                  $catLink = 'images/categories/cat_new18.gif';
+                  $catDetails = "/tv";
                   break;
               case str_contains($catLink, "x265"):
-                  $catLink = 'x264.gif';
+                  $catLink = 'images/categories/cat_new52.gif';
                   $catDetails = "/x265";
                   break;
               case str_contains($catLink, "remux"):
-                  $catLink = 'remux.gif';
-                  $catDetails = "";
+                  $catLink = 'images/categories/cat_new46.gif';
+                  $catDetails = "/remux";
                   break;
               case str_contains($catLink, "anime"):
-                  $catLink = 'tv.gif';
+                  $catLink = 'images/categories/cat_new20.gif';
+                  $catDetails= "/anime";
                   break;
               case str_contains($catLink, "games"):
-                  $catLink = 'games_pc_iso.gif';
-                  $catDetails = "";
+                  $catLink = 'images/categories/cat_new27.gif';
+                  $catDetails = "/games";
                   break;
               default:
-                  $catLink = 'pc_iso.gif';
-                  $catDetails = "";
+                  $catLink = 'images/categories/cat_new7.gif';
+                  $catDetails = "/misc";
                   break;
           }
 
