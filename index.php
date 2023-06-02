@@ -81,8 +81,8 @@
       <h3>Recommended Torrents:</h3>
       ...Placeholder..<br><br>
       <div style="background-color:#D3DDE7;padding:15px;width:600px;display:inline-block;border-radius:3px;">
-        <form>
-          <input type="text" style="width:calc(100% - 200px);height:30px;" placeholder="Search Torrents">
+        <form action="/search/" method="GET">
+          <input name="q" type="text" style="width:calc(100% - 200px);height:30px;" placeholder="Search Torrents">
           <button>
             <i class="fas fa-search"></i>
             Search
@@ -92,44 +92,44 @@
           <div style="display:none;text-align:left;">
             <input type="radio" name="cat" id="radMovies">
             <label for="radMovies" class="one">
-              <a href="/movies/">Movies</a>
+              <a href="/cat/movies/">Movies</a>
             </label>
 
             <input type="radio" name="cat" id="radTV">
             <label for="radTV" class="one">
-              <a href="/tv/">TV Shows</a>
+              <a href="/cat/tv/">TV Shows</a>
             </label>
 
             <input type="radio" name="cat" id="radGames">
             <label for="radGames" class="one">
-              <a href="/games/">Games</a>
+              <a href="/cat/games/">Games</a>
             </label>
 
 
             <input type="radio" name="cat" id="radMusic">
             <label for="radMusic" class="one">
-              <a href="/music/">Music</a>
+              <a href="/cat/music/">Music</a>
             </label>
 
             <hr>
 
             <input type="radio" name="cat" id="radAnime">
             <label for="radAnime" class="two">
-              <a href="/anime/">Anime</a>
+              <a href="/cat/anime/">Anime</a>
             </label>
 
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
             <input type="radio" name="cat" id="radApps">
             <label for="radApps" class="two">
-              <a href="/apps/">Apps</a>
+              <a href="/cat/apps/">Apps</a>
             </label>
 
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
             <input type="radio" name="cat" id="radOther">
             <label for="radOther" class="two">
-              <a href="/other/">Other</a>
+              <a href="/cat/other/">Other</a>
             </label>
 
             <br><br>
