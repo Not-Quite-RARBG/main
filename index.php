@@ -1,75 +1,87 @@
 <!doctype html>
 <html>
-  <head>
-    <title>Not Quite RARBG</title>
-    <link href="https://slidemovies.org/FA6Pro/css/all.min.css" rel="stylesheet">
-    <style>
-      button {
-        background-color: #3760BB;
-        color: white;
-        border-radius: 2px;
-        cursor: pointer;
-        height: 35px;
-        border: 1px solid black;
-        padding-left: 10px;
-        padding-right: 10px;
-        font-family: monospace;
-      }
-      label.one {
-        margin-right: 50px;
-      }
-      a {
-        color: #3760BB;
-        font-family: monospace;
-        text-decoration: none;
-      }
-      a:hover {
-        color: #3760BB;
-        text-decoration: underline;
-      }
-      thead {
-        background-color: #3760BB;
-        color: white;
-        text-decoration: underline;
-      }
-      table {
-        border-spacing: 0.5px;
-      }
-      tbody {
-        background-color: #D3DDE7;
-      }
-      td, th {
-        border: 1px solid white;
-        padding: 5px;
-      }
-      button > a {
-        color: white;
-      }
-      button > a:hover {
-        color: white !important;
-      }
-    </style>
-  </head>
-  <body style="background-color:black;padding:30px;font-family:monospace;">
-    <div style="background-image:url(/img/bknd_body.jpg);position:fixed;top:0;left:0;width:100%;height:100%;z-index:-1;"></div>
-    <h1 style="position:absolute;top:-10px;color:#3760BB;text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;">Not Quite</h1>
-    <img src="/logo.png">
-    <br><br><br>
-    <div style="text-align:center;position:relative;">
-      <div style="background-color:white;display:inline-block;border-radius:5px;padding:15px;position:relative;">
-          <button style="position:absolute;left:-110px;width:110px;"><a href="/"><i class="fas fa-house"></i> Home</a></button>
-          <button style="position:absolute;left:-110px;width:110px;top:50px;"><a href="/cat/movies/"><i class="fa-solid fa-film"></i> Movies</a></button>
-          <button style="position:absolute;left:-110px;width:110px;top:85px;"><a href="/cat/tv%20series/"><i class="fa-solid fa-tv"></i> TV</a></a></button>
-          <button style="position:absolute;left:-110px;width:110px;top:120px;"><a href="/cat/games/"><i class="fa-solid fa-game-console-handheld"></i> Games</a></button>
-          <button style="position:absolute;left:-110px;width:110px;top:155px;"><a href="/cat/music/"><i class="fa-solid fa-music"></i> Music</a></button>
-          <button style="position:absolute;left:-110px;width:110px;top:190px;"><a href="/cat/anime/"><i class="fa-solid fa-a"></i> Anime</a></button>
-          <button style="position:absolute;left:-110px;width:110px;top:225px;"><a href="/cat/apps/"><i class="fa-brands fa-app-store-ios"></i> Apps</a></button>
-          <button style="position:absolute;left:-110px;width:110px;top:260px;"><a href="/cat/other/"><i class="fa-solid fa-question"></i> Other</a></button>
-        
-        <h3>Recommended Torrents:</h3>
-        ...Placeholder..<br><br>
-        <div style="background-color:#D3DDE7;padding:15px;width:600px;display:inline-block;border-radius:3px;">
-          <form>
+
+<head>
+  <title>Not Quite RARBG</title>
+  <link href="https://slidemovies.org/FA6Pro/css/all.min.css" rel="stylesheet">
+  <style>
+    button {
+      background-color: #3760BB;
+      color: white;
+      border-radius: 2px;
+      cursor: pointer;
+      height: 35px;
+      border: 1px solid black;
+      padding-left: 10px;
+      padding-right: 10px;
+      font-family: monospace;
+    }
+
+    label.one {
+      margin-right: 50px;
+    }
+
+    a {
+      color: #3760BB;
+      font-family: monospace;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: #3760BB;
+      text-decoration: underline;
+    }
+
+    thead {
+      background-color: #3760BB;
+      color: white;
+      text-decoration: underline;
+    }
+
+    table {
+      border-spacing: 0.5px;
+    }
+
+    tbody {
+      background-color: #D3DDE7;
+    }
+
+    td,
+    th {
+      border: 1px solid white;
+      padding: 5px;
+    }
+
+    button>a {
+      color: white;
+    }
+
+    button>a:hover {
+      color: white !important;
+    }
+  </style>
+</head>
+
+<body style="background-color:black;padding:30px;font-family:monospace;">
+  <div style="background-image:url(/img/bknd_body.jpg);position:fixed;top:0;left:0;width:100%;height:100%;z-index:-1;"></div>
+  <h1 style="position:absolute;top:-10px;color:#3760BB;text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;">Not Quite</h1>
+  <img src="/logo.png">
+  <br><br><br>
+  <div style="text-align:center;position:relative;">
+    <div style="background-color:white;display:inline-block;border-radius:5px;padding:15px;position:relative;">
+      <button style="position:absolute;left:-110px;width:110px;"><a href="/"><i class="fas fa-house"></i> Home</a></button>
+      <button style="position:absolute;left:-110px;width:110px;top:50px;"><a href="/cat/movies/"><i class="fa-solid fa-film"></i> Movies</a></button>
+      <button style="position:absolute;left:-110px;width:110px;top:85px;"><a href="/cat/tv%20series/"><i class="fa-solid fa-tv"></i> TV</a></a></button>
+      <button style="position:absolute;left:-110px;width:110px;top:120px;"><a href="/cat/games/"><i class="fa-solid fa-game-console-handheld"></i> Games</a></button>
+      <button style="position:absolute;left:-110px;width:110px;top:155px;"><a href="/cat/music/"><i class="fa-solid fa-music"></i> Music</a></button>
+      <button style="position:absolute;left:-110px;width:110px;top:190px;"><a href="/cat/anime/"><i class="fa-solid fa-a"></i> Anime</a></button>
+      <button style="position:absolute;left:-110px;width:110px;top:225px;"><a href="/cat/apps/"><i class="fa-brands fa-app-store-ios"></i> Apps</a></button>
+      <button style="position:absolute;left:-110px;width:110px;top:260px;"><a href="/cat/other/"><i class="fa-solid fa-question"></i> Other</a></button>
+
+      <h3>Recommended Torrents:</h3>
+      ...Placeholder..<br><br>
+      <div style="background-color:#D3DDE7;padding:15px;width:600px;display:inline-block;border-radius:3px;">
+        <form>
           <input type="text" style="width:calc(100% - 200px);height:30px;" placeholder="Search Torrents">
           <button>
             <i class="fas fa-search"></i>
@@ -100,7 +112,7 @@
             </label>
 
             <hr>
-            
+
             <input type="radio" name="cat" id="radAnime">
             <label for="radAnime" class="two">
               <a href="/anime/">Anime</a>
@@ -127,108 +139,115 @@
             </div>
           </div>
         </form>
-        </div>
+      </div>
 
-        <br><br><br><br>
-        <?php
-          $jsonData = json_decode(file_get_contents("https://api--nqr.slidemovies.org/"))->data;
-        ?>
+      <br><br><br><br>
+      <?php
+      $jsonData = json_decode(file_get_contents("https://api--nqr.slidemovies.org/"))->data;
+      ?>
 
-        <table>
-          <thead>
-            <th>
-              Cat.
-            </th>
-            <th>
-              File
-            </th>
-            <th>
-              Category
-            </th>
-            <th>
-              Added
-            </th>
-            <th>
-              Size
-            </th>
-            <th>
-              S.
-            </th>
-            <th>
-              L.
-            </th>
-          </thead>
-          <tbody>
-            <?php
-              foreach ($jsonData as $item) {
-                $catName = $item->cat;
-                $catLink = $item->cat;
-                $catDetails = "";
-                if ($catName == "pc_iso") {
-                  $catName = "Apps";
-                }
-                else if (str_contains($catName, "games")) {
-                  $catName = "Games";
-                }
-                else if (str_contains($catName, "tv")) {
-                  $catName = "TV Series";
-                }
-                else if (str_contains($catName, "movies")) {
-                  $catName = "Movies";
-                }
-                else if (str_contains($catName, "tv")) {
-                  $catName = "Anime";
-                }
+      <table>
+        <thead>
+          <th>
+            Cat.
+          </th>
+          <th>
+            File
+          </th>
+          <th>
+            Category
+          </th>
+          <th>
+            Added
+          </th>
+          <th>
+            Size
+          </th>
+          <th>
+            S.
+          </th>
+          <th>
+            L.
+          </th>
+        </thead>
+        <tbody>
+          <?php
+          $catNameMappings = [
+            'games' => 'Games',
+            'movies' => 'Movies',
+            'music' => 'Music',
+            'software' => 'Software',
+            'tv' => 'TV',
+          ];
 
-                if (str_contains($catLink, "xvid")) {
-                  $catLink = 'xvid.gif';
-                  $catDetails = "/XVid";
-                }
-                else if (str_contains($catLink, "x264")) {
-                  $catLink = 'x264.gif';
-                  $catDetails = "/X264";
-                }
-                else if (str_contains($catLink, "tv")) {
-                  $catLink = 'tv.gif';
-                  $catDetails = "";
-                }
-                else if (str_contains($catLink, "x265")) {
-                  $catLink = 'x264.gif';
-                  $catDetails = "/x265";
-                }
-                else if (str_contains($catLink, "remux")) {
-                  $catLink = 'remux.gif';
-                  $catDetails = "";
-                }
-                else if (str_contains($catLink, "anime")) {
-                  $catLink = 'tv.gif';
-                }
-                else if (str_contains($catLink, "games")) {
-                  $catLink = 'games_pc_iso.gif';
-                  $catDetails = "";
-                }
-                else {
-                  $catLink = 'pc_iso.gif';
-                  $catDetails = "";
-                }
-                
-                echo '<tr>
+          $catLinkMappings = [
+            'ebooks' => ['image' => 'images/categories/cat_new7.gif', 'details' => '/eBooks'],
+            'games_pc_iso' => ['image' => 'images/categories/cat_new27.gif', 'details' => '/ISO'],
+            'games_pc_rip' => ['image' => 'images/categories/cat_new28.gif', 'details' => '/RIP'],
+            'ps3' => ['image' => 'images/categories/cat_new40.gif', 'details' => '/PS3'],
+            'ps4' => ['image' => 'images/categories/cat_new53.gif', 'details' => '/PS4'],
+            'xbox360' => ['image' => 'images/categories/cat_new32.gif', 'details' => '/X360'],
+            'movies' => ['image' => 'images/categories/cat_new44.gif', 'details' => ''],
+            'movies_bd_full' => ['image' => 'images/categories/cat_new42.gif', 'details' => '/Bluray'],
+            'movies_bd_remux' => ['image' => 'images/categories/cat_new46.gif', 'details' => '/BD Remux'],
+            'movies_x264' => ['image' => 'images/categories/cat_new44.gif', 'details' => '/x264'],
+            'movies_x264_3d' => ['image' => 'images/categories/cat_new47.gif', 'details' => '/x264 3D'],
+            'movies_x264_4k' => ['image' => 'images/categories/cat_new50.gif', 'details' => '/x264 4K'],
+            'movies_x264_720' => ['image' => 'images/categories/cat_new45.gif', 'details' => '/x264 720p'],
+            'movies_x265' => ['image' => 'images/categories/cat_new52.gif', 'details' => '/x265'],
+            'movies_x265_4k' => ['image' => 'images/categories/cat_new52.gif', 'details' => '/x265 4K'],
+            'movies_x265_4k_hdr' => ['image' => 'images/categories/cat_new52.gif', 'details' => '/x265 4K HDR'],
+            'movies_xvid' => ['image' => 'images/categories/cat_new14.gif', 'details' => '/XVID'],
+            'movies_xvid_720' => ['image' => 'images/categories/cat_new14.gif', 'details' => '/XVID 720p'],
+            'music_flac' => ['image' => 'images/categories/cat_new25.gif', 'details' => '/FLAC'],
+            'music_mp3' => ['image' => 'images/categories/cat_new23.gif', 'details' => '/MP3'],
+            'software_pc_iso' => ['image' => 'images/categories/cat_new35.gif', 'details' => '/ISO'],
+            'tv' => ['image' => 'images/categories/cat_new41.gif', 'details' => '/HD'],
+            'tv_sd' => ['image' => 'images/categories/cat_new18.gif', 'details' => '/SD'],
+            'tv_uhd' => ['image' => 'images/categories/cat_new49.gif', 'details' => '/UHD'],
+          ];
+
+          foreach ($jsonData as $item) {
+            $catName = $item->cat;
+            $catLink = $item->cat;
+            $catDetails = "";
+
+            // Map the catName
+            foreach ($catNameMappings as $keyword => $mappedName) {
+              if (str_contains($catName, $keyword)) {
+                $catName = $mappedName;
+                break;
+              }
+            }
+
+            // Map the catLink
+            foreach ($catLinkMappings as $keyword => $mapping) {
+              if (str_contains($catLink, $keyword)) {
+                $catLink = $mapping['image'];
+                $catDetails = $mapping['details'];
+                break;
+              }
+            }
+
+
+
+            echo '<tr>
               <td>
-                <img src="/'.$catLink.'">
+                <img src="/' . $catLink . '">
               </td>
               <td>
                 <div style="text-align:left;">
-                  <a href="/torrent/'.$item->ext_id.'" style="font-weight:900;">'.$item->name.'</a>
+                  <a href="/torrent/' . $item->ext_id . '" style="font-weight:900;">' . $item->name . '</a>
                 </div>
               </td>
               <td>
-                <a href="/cat/'.$catName.'" style="font-weight:900;">'.$catName.$catDetails.'</a>
+                <a href="/cat/' . $catName . '" style="font-weight:900;">' . $catName . $catDetails . '</a>
               </td>
               <td>
                 <div style="display:inline-block;">2023-06-01<br>08:06:43</div>
               </td>
               <td>
-                '.round($item->size / 1e+6).' MB
+                 ' . (($item->size < 1073741824) ? number_format($item->size / 1048576, 1) . " MB" : number_format($item->size / 1073741824, 2) . " GB") . ' 
               </td>
               <td style="color:green;">
                 ?
@@ -237,12 +256,13 @@
                 ?
               </td>
             </tr>';
-              }
-            ?>
-          </tbody>
-        </table>
-        
-      </div>
+          }
+          ?>
+        </tbody>
+      </table>
+
     </div>
-  </body>
+  </div>
+</body>
+
 </html>
