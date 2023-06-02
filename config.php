@@ -1,4 +1,5 @@
 <?php
-  $api_url = /* your API url */;
-  $api_key = /* your API key */;
+  $api_url = 'http://localhost/api';
+  $api_key = 'key';
+  $home_url = 'http://localhost/';
 ?>
