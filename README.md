@@ -1,3 +1,5 @@
+<img src="NQ-RARBG.png" style="width:300px;">
+
 # Not Quite RARBG
 
 Continuing the legacy of the OG RARBG.
