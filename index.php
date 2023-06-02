@@ -172,66 +172,66 @@
         </thead>
         <tbody>
           <?php
-            $catNameMappings = [
-              'games' => 'Games',
-              'movies' => 'Movies',
-              'music' => 'Music',
-              'software' => 'Software',
-              'tv' => 'TV',
-              'xxx' => 'XXX',
+          $catNameMappings = [
+            'games' => 'Games',
+            'movies' => 'Movies',
+            'music' => 'Music',
+            'software' => 'Software',
+            'tv' => 'TV',
+            'xxx' => 'XXX',
           ];
-          
+
           $catLinkMappings = [
-              'ebooks' => ['image' => 'images/categories/cat_new7.gif', 'details' => '/eBooks'],
-              'games_pc_iso' => ['image' => 'images/categories/cat_new27.gif', 'details' => '/ISO'],
-              'games_pc_rip' => ['image' => 'images/categories/cat_new28.gif', 'details' => '/RIP'],
-              'ps3' => ['image' => 'images/categories/cat_new40.gif', 'details' => '/PS3'],
-              'ps4' => ['image' => 'images/categories/cat_new53.gif', 'details' => '/PS4'],
-              'xbox360' => ['image' => 'images/categories/cat_new32.gif', 'details' => '/X360'],
-              'movies' => ['image' => 'images/categories/cat_new44.gif', 'details' => ''],
-              'movies_bd_full' => ['image' => 'images/categories/cat_new42.gif', 'details' => '/Bluray'],
-              'movies_bd_remux' => ['image' => 'images/categories/cat_new46.gif', 'details' => '/BD Remux'],
-              'movies_x264' => ['image' => 'images/categories/cat_new44.gif', 'details' => '/x264'],
-              'movies_x264_3d' => ['image' => 'images/categories/cat_new47.gif', 'details' => '/x264 3D'],
-              'movies_x264_4k' => ['image' => 'images/categories/cat_new50.gif', 'details' => '/x264 4K'],
-              'movies_x264_720' => ['image' => 'images/categories/cat_new45.gif', 'details' => '/x264 720p'],
-              'movies_x265' => ['image' => 'images/categories/cat_new52.gif', 'details' => '/x265'],
-              'movies_x265_4k' => ['image' => 'images/categories/cat_new52.gif', 'details' => '/x265 4K'],
-              'movies_x265_4k_hdr' => ['image' => 'images/categories/cat_new52.gif', 'details' => '/x265 4K HDR'],
-              'movies_xvid' => ['image' => 'images/categories/cat_new14.gif', 'details' => '/XVID'],
-              'movies_xvid_720' => ['image' => 'images/categories/cat_new14.gif', 'details' => '/XVID 720p'],
-              'music_flac' => ['image' => 'images/categories/cat_new25.gif', 'details' => '/FLAC'],
-              'music_mp3' => ['image' => 'images/categories/cat_new23.gif', 'details' => '/MP3'],
-              'software_pc_iso' => ['image' => 'images/categories/cat_new35.gif', 'details' => '/ISO'],
-              'tv' => ['image' => 'images/categories/cat_new41.gif', 'details' => '/HD'],
-              'tv_sd' => ['image' => 'images/categories/cat_new18.gif', 'details' => '/SD'],
-              'tv_uhd' => ['image' => 'images/categories/cat_new49.gif', 'details' => '/UHD'],
-              'xxx' => ['image' => 'images/categories/cat_new35.gif', 'details' => ''],
+            'ebooks' => ['image' => 'images/categories/cat_new7.gif', 'details' => '/eBooks'],
+            'games_pc_iso' => ['image' => 'images/categories/cat_new27.gif', 'details' => '/ISO'],
+            'games_pc_rip' => ['image' => 'images/categories/cat_new28.gif', 'details' => '/RIP'],
+            'ps3' => ['image' => 'images/categories/cat_new40.gif', 'details' => '/PS3'],
+            'ps4' => ['image' => 'images/categories/cat_new53.gif', 'details' => '/PS4'],
+            'xbox360' => ['image' => 'images/categories/cat_new32.gif', 'details' => '/X360'],
+            'movies' => ['image' => 'images/categories/cat_new44.gif', 'details' => ''],
+            'movies_bd_full' => ['image' => 'images/categories/cat_new42.gif', 'details' => '/Bluray'],
+            'movies_bd_remux' => ['image' => 'images/categories/cat_new46.gif', 'details' => '/BD Remux'],
+            'movies_x264' => ['image' => 'images/categories/cat_new44.gif', 'details' => '/x264'],
+            'movies_x264_3d' => ['image' => 'images/categories/cat_new47.gif', 'details' => '/x264 3D'],
+            'movies_x264_4k' => ['image' => 'images/categories/cat_new50.gif', 'details' => '/x264 4K'],
+            'movies_x264_720' => ['image' => 'images/categories/cat_new45.gif', 'details' => '/x264 720p'],
+            'movies_x265' => ['image' => 'images/categories/cat_new52.gif', 'details' => '/x265'],
+            'movies_x265_4k' => ['image' => 'images/categories/cat_new52.gif', 'details' => '/x265 4K'],
+            'movies_x265_4k_hdr' => ['image' => 'images/categories/cat_new52.gif', 'details' => '/x265 4K HDR'],
+            'movies_xvid' => ['image' => 'images/categories/cat_new14.gif', 'details' => '/XVID'],
+            'movies_xvid_720' => ['image' => 'images/categories/cat_new14.gif', 'details' => '/XVID 720p'],
+            'music_flac' => ['image' => 'images/categories/cat_new25.gif', 'details' => '/FLAC'],
+            'music_mp3' => ['image' => 'images/categories/cat_new23.gif', 'details' => '/MP3'],
+            'software_pc_iso' => ['image' => 'images/categories/cat_new35.gif', 'details' => '/ISO'],
+            'tv' => ['image' => 'images/categories/cat_new41.gif', 'details' => '/HD'],
+            'tv_sd' => ['image' => 'images/categories/cat_new18.gif', 'details' => '/SD'],
+            'tv_uhd' => ['image' => 'images/categories/cat_new49.gif', 'details' => '/UHD'],
+            'xxx' => ['image' => 'images/categories/cat_new35.gif', 'details' => ''],
           ];
-          
+
           foreach ($jsonData as $item) {
-              $catName = $item->cat;
-              $catLink = $item->cat;
-              $catDetails = "";
-          
-              // Map the catName
-              foreach ($catNameMappings as $keyword => $mappedName) {
-                  if (str_contains($catName, $keyword)) {
-                      $catName = $mappedName;
-                      break;
-                  }
+            $catName = $item->cat;
+            $catLink = $item->cat;
+            $catDetails = "";
+
+            // Map the catName
+            foreach ($catNameMappings as $keyword => $mappedName) {
+              if (str_contains($catName, $keyword)) {
+                $catName = $mappedName;
+                break;
               }
-          
-              // Map the catLink
-              foreach ($catLinkMappings as $keyword => $mapping) {
-                  if (str_contains($catLink, $keyword)) {
-                      $catLink = $mapping['image'];
-                      $catDetails = $mapping['details'];
-                      break;
-                  }
+            }
+
+            // Map the catLink
+            foreach ($catLinkMappings as $keyword => $mapping) {
+              if (str_contains($catLink, $keyword)) {
+                $catLink = $mapping['image'];
+                $catDetails = $mapping['details'];
+                break;
               }
-          
-          
+            }
+
+
 
             echo '<tr>
               <td>
@@ -249,7 +249,7 @@
                 <div style="display:inline-block;">2023-06-01<br>08:06:43</div>
               </td>
               <td>
-                 '.$formattedSize = ($item->size < 1073741824) ? number_format($item->size / 1048576, 1). " MB" : number_format($item->size / 1073741824, 2) . " GB"; '
+                 ' . (($item->size < 1073741824) ? number_format($item->size / 1048576, 1) . " MB" : number_format($item->size / 1073741824, 2) . " GB") . ' 
               </td>
               <td style="color:green;">
                 ?
