@@ -178,7 +178,6 @@
             'music' => 'Music',
             'software' => 'Software',
             'tv' => 'TV',
-            'xxx' => 'XXX',
           ];
 
           $catLinkMappings = [
@@ -206,7 +205,6 @@
             'tv' => ['image' => 'images/categories/cat_new41.gif', 'details' => '/HD'],
             'tv_sd' => ['image' => 'images/categories/cat_new18.gif', 'details' => '/SD'],
             'tv_uhd' => ['image' => 'images/categories/cat_new49.gif', 'details' => '/UHD'],
-            'xxx' => ['image' => 'images/categories/cat_new35.gif', 'details' => ''],
           ];
 
           foreach ($jsonData as $item) {
