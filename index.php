@@ -172,142 +172,66 @@
         </thead>
         <tbody>
           <?php
+            $catNameMappings = [
+              'games' => 'Games',
+              'movies' => 'Movies',
+              'music' => 'Music',
+              'software' => 'Software',
+              'tv' => 'TV',
+              'xxx' => 'XXX',
+          ];
+          
+          $catLinkMappings = [
+              'ebooks' => ['image' => 'images/categories/cat_new7.gif', 'details' => '/eBooks'],
+              'games_pc_iso' => ['image' => 'images/categories/cat_new27.gif', 'details' => '/ISO'],
+              'games_pc_rip' => ['image' => 'images/categories/cat_new28.gif', 'details' => '/RIP'],
+              'ps3' => ['image' => 'images/categories/cat_new40.gif', 'details' => '/PS3'],
+              'ps4' => ['image' => 'images/categories/cat_new53.gif', 'details' => '/PS4'],
+              'xbox360' => ['image' => 'images/categories/cat_new32.gif', 'details' => '/X360'],
+              'movies' => ['image' => 'images/categories/cat_new44.gif', 'details' => ''],
+              'movies_bd_full' => ['image' => 'images/categories/cat_new42.gif', 'details' => '/Bluray'],
+              'movies_bd_remux' => ['image' => 'images/categories/cat_new46.gif', 'details' => '/BD Remux'],
+              'movies_x264' => ['image' => 'images/categories/cat_new44.gif', 'details' => '/x264'],
+              'movies_x264_3d' => ['image' => 'images/categories/cat_new47.gif', 'details' => '/x264 3D'],
+              'movies_x264_4k' => ['image' => 'images/categories/cat_new50.gif', 'details' => '/x264 4K'],
+              'movies_x264_720' => ['image' => 'images/categories/cat_new45.gif', 'details' => '/x264 720p'],
+              'movies_x265' => ['image' => 'images/categories/cat_new52.gif', 'details' => '/x265'],
+              'movies_x265_4k' => ['image' => 'images/categories/cat_new52.gif', 'details' => '/x265 4K'],
+              'movies_x265_4k_hdr' => ['image' => 'images/categories/cat_new52.gif', 'details' => '/x265 4K HDR'],
+              'movies_xvid' => ['image' => 'images/categories/cat_new14.gif', 'details' => '/XVID'],
+              'movies_xvid_720' => ['image' => 'images/categories/cat_new14.gif', 'details' => '/XVID 720p'],
+              'music_flac' => ['image' => 'images/categories/cat_new25.gif', 'details' => '/FLAC'],
+              'music_mp3' => ['image' => 'images/categories/cat_new23.gif', 'details' => '/MP3'],
+              'software_pc_iso' => ['image' => 'images/categories/cat_new35.gif', 'details' => '/ISO'],
+              'tv' => ['image' => 'images/categories/cat_new41.gif', 'details' => '/HD'],
+              'tv_sd' => ['image' => 'images/categories/cat_new18.gif', 'details' => '/SD'],
+              'tv_uhd' => ['image' => 'images/categories/cat_new49.gif', 'details' => '/UHD'],
+              'xxx' => ['image' => 'images/categories/cat_new35.gif', 'details' => ''],
+          ];
+          
           foreach ($jsonData as $item) {
-            $catName = $item->cat;
-            $catLink = $item->cat;
-            $catDetails = "";
-
-            switch ($catName) {
-              case str_contains($catName, "games"):
-                $catName = "Games";
-                break;
-              case str_contains($catName, "movies"):
-                $catName = "Movies";
-                break;
-              case str_contains($catName, "music"):
-                $catName = "Music";
-                break;
-              case str_contains($catName, "software"):
-                $catName = "Software";
-                break;
-              case str_contains($catName, "tv"):
-                $catName = "TV";
-                break;
-              case str_contains($catName, "xxx"):
-                $catName = "XXX";
-                break;
-              default:
-                $catName = "Misc.";
-            }
-
-            switch ($catLink) {
-
-              case str_contains($catLink, "ebooks"):
-                $catLink = 'images/categories/cat_new7.gif';
-                $catDetails = "/eBooks";
-                break;
-              case str_contains($catLink, "games_pc_iso"):
-                $catLink = 'images/categories/cat_new27.gif';
-                $catDetails = "/ISO";
-                break;
-              case str_contains($catLink, "games_pc_rip"):
-                $catLink = 'images/categories/cat_new28.gif';
-                $catDetails = "/RIP";
-                break;
-              case str_contains($catLink, "ps3"):
-                $catLink = 'images/categories/cat_new40.gif';
-                $catDetails = "/PS3";
-                break;
-              case str_contains($catLink, "ps4"):
-                $catLink = 'images/categories/cat_new53.gif';
-                $catDetails = "/PS4";
-                break;
-              case str_contains($catLink, "xbox360"):
-                $catLink = 'images/categories/cat_new32.gif';
-                $catDetails = "/X360";
-                break;
-              case str_contains($catLink, "movies"):
-                $catLink = 'images/categories/cat_new44.gif';
-                $catDetails = "";
-                break;
-              case str_contains($catLink, "movies_bd_full"):
-                $catLink = 'images/categories/cat_new42.gif';
-                $catDetails = "/Bluray";
-                break;
-              case str_contains($catLink, "movies_bd_remux"):
-                $catLink = 'images/categories/cat_new46.gif';
-                $catDetails = "/BD Remux";
-                break;
-              case str_contains($catLink, "movies_x264"):
-                $catLink = 'images/categories/cat_new44.gif';
-                $catDetails = "/x264";
-                break;
-              case str_contains($catLink, "movies_x264_3d"):
-                $catLink = 'images/categories/cat_new47.gif';
-                $catDetails = "/x264 3D";
-                break;
-              case str_contains($catLink, "movies_x264_4k"):
-                $catLink = 'images/categories/cat_new50.gif';
-                $catDetails = "/x264 4K";
-                break;
-              case str_contains($catLink, "movies_x264_720"):
-                $catLink = 'images/categories/cat_new45.gif';
-                $catDetails = "/x264 720p";
-                break;
-              case str_contains($catLink, "movies_x265"):
-                $catLink = 'images/categories/cat_new52.gif';
-                $catDetails = "/x265";
-                break;
-              case str_contains($catLink, "movies_x265_4k"):
-                $catLink = 'images/categories/cat_new52.gif';
-                $catDetails = "/x265 4K";
-                break;
-              case str_contains($catLink, "movies_x265_4k_hdr"):
-                $catLink = 'images/categories/cat_new52.gif';
-                $catDetails = "/x265 4K HDR";
-                break;
-              case str_contains($catLink, "movies_xvid"):
-                $catLink = 'images/categories/cat_new14.gif';
-                $catDetails = "/XVID";
-                break;
-              case str_contains($catLink, "movies_xvid_720"):
-                $catLink = 'images/categories/cat_new14.gif';
-                $catDetails = "/XVID 720p";
-                break;
-              case str_contains($catLink, "music_flac"):
-                $catLink = 'images/categories/cat_new25.gif';
-                $catDetails = "/FLAC";
-                break;
-              case str_contains($catLink, "music_mp3"):
-                $catLink = 'images/categories/cat_new23.gif';
-                $catDetails = "/MP3";
-                break;
-              case str_contains($catLink, "software_pc_iso"):
-                $catLink = 'images/categories/cat_new35.gif';
-                $catDetails = "/ISO";
-                break;
-              case str_contains($catLink, "tv"):
-                $catLink = 'images/categories/cat_new41.gif';
-                $catDetails = "/HD";
-                break;
-              case str_contains($catLink, "tv_sd"):
-                $catLink = 'images/categories/cat_new18.gif';
-                $catDetails = "/SD";
-                break;
-              case str_contains($catLink, "tv_uhd"):
-                $catLink = 'images/categories/cat_new49.gif';
-                $catDetails = "/UHD";
-                break;
-              case str_contains($catLink, "xxx"):
-                $catLink = 'images/categories/cat_new35.gif';
-                $catDetails = "";
-                break;
-              default:
-                #Misc. icon
-                $catLink = 'images/categories/cat_new7.gif';
-                $catDetails = "";
-                break;
-            }
+              $catName = $item->cat;
+              $catLink = $item->cat;
+              $catDetails = "";
+          
+              // Map the catName
+              foreach ($catNameMappings as $keyword => $mappedName) {
+                  if (str_contains($catName, $keyword)) {
+                      $catName = $mappedName;
+                      break;
+                  }
+              }
+          
+              // Map the catLink
+              foreach ($catLinkMappings as $keyword => $mapping) {
+                  if (str_contains($catLink, $keyword)) {
+                      $catLink = $mapping['image'];
+                      $catDetails = $mapping['details'];
+                      break;
+                  }
+              }
+          
+          
 
             echo '<tr>
               <td>
