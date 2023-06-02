@@ -1,8 +1,12 @@
 # Not Quite RARBG
 
-Continuing the legacy of the OG RARBG. Domain is available at [nq-rarbg.to](https://nq-rarbg.to/) and [nq-rarbg.slidemovies.org](http://nq-rarbg.slidemovies.org/).
+Continuing the legacy of the OG RARBG.
+Current and active domains are:
+[nq-rarbg.to](https://nq-rarbg.to/)
+[nq-rarbg.slidemovies.org](http://nq-rarbg.slidemovies.org/).
 
-Want to help out? Check our [contributing guide](./CONTRIBUTING.md). Couldn't be possible without <https://www.reddit.com/r/PiratedGames/comments/13wjasv/comment/jmd5sbf/?utm_source=share&utm_medium=web2x&context=3>
+Want to help out? Check our [contributing guide](./CONTRIBUTING.md).
+Couldn't be possible without <https://www.reddit.com/r/PiratedGames/comments/13wjasv/comment/jmd5sbf/?utm_source=share&utm_medium=web2x&context=3>
 
 ## About
 
