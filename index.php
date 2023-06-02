@@ -249,7 +249,7 @@
                 <div style="display:inline-block;">2023-06-01<br>08:06:43</div>
               </td>
               <td>
-                ' . round($item->size / 1e+6) . ' MB
+                 '.$formattedSize = ($item->size < 1073741824) ? number_format($item->size / 1048576, 1). " MB" : number_format($item->size / 1073741824, 2) . " GB"; '
               </td>
               <td style="color:green;">
                 ?
