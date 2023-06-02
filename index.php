@@ -65,7 +65,7 @@
 </head>
 
 <body style="background-color:black;padding:30px;font-family:monospace;">
-  <div style="background-image:url(/img/bknd_body.jpg);position:fixed;top:0;left:0;width:100%;height:100%;z-index:-1;"></div>
+  <div style="background-image:url(/img/bknd_body.jpg);background-size:cover;background-position:center;background-repeat:no-repeat;position:fixed;top:0;left:0;width:100%;height:100%;z-index:-1;"></div>
   <h1 style="position:absolute;top:-10px;color:#3760BB;text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;">Not Quite</h1>
   <img src="/logo.png">
   <br><br><br>
