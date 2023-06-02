@@ -1,6 +1,8 @@
+<?php
+  require "config.php";
+?>
 <!doctype html>
 <html>
-
 <head>
   <title>Not Quite RARBG</title>
   <link href="https://slidemovies.org/FA6Pro/css/all.min.css" rel="stylesheet">
@@ -143,7 +145,7 @@
 
       <br><br><br><br>
       <?php
-      $jsonData = json_decode(file_get_contents("https://api--nqr.slidemovies.org/"))->data;
+      $jsonData = json_decode(file_get_contents($api_url))->data;
       ?>
 
       <table>
