@@ -73,7 +73,7 @@
         <?php
           $url_parts = explode("/", $_SERVER['REQUEST_URI']);
           $id = end($url_parts);
-          $jsonData = json_decode(file_get_contents("$api_url/torrent.php?id=$id"));
+          $jsonData = json_decode(file_get_contents("$api_url/torrent.php?id=$id&key=$api_key"));
         ?>
 
         <h3><?php echo $jsonData->name; ?></h3>
