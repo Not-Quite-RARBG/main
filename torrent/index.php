@@ -1,3 +1,6 @@
+<?php
+  require "../config.php";
+?>
 <!doctype html>
 <html>
   <head>
@@ -70,7 +73,7 @@
         <?php
           $url_parts = explode("/", $_SERVER['REQUEST_URI']);
           $id = end($url_parts);
-          $jsonData = json_decode(file_get_contents("https://api--nqr.slidemovies.org/torrent.php?id=$id"));
+          $jsonData = json_decode(file_get_contents("$api_url/torrent.php?id=$id"));
         ?>
 
         <h3><?php echo $jsonData->name; ?></h3>
