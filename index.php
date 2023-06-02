@@ -246,7 +246,7 @@
                 <a href="/cat/' . $catName . '" style="font-weight:900;">' . $catName . $catDetails . '</a>
               </td>
               <td>
-                <div style="display:inline-block;">2023-06-01<br>08:06:43</div>
+                <div style="display:inline-block;">'.explode(" ", $item->date)[0].'<br>'.explode(" ", $item->date)[1].'</div>
               </td>
               <td>
                  ' . (($item->size < 1073741824) ? number_format($item->size / 1048576, 1) . " MB" : number_format($item->size / 1073741824, 2) . " GB") . ' 
