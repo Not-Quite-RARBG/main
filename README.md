@@ -19,5 +19,3 @@ After achieving this goal, the website will open registrations, so users can upl
 ## Why
   
 The whole community really misses the OG RARBG as it was the GOAT of torrent sites. As a community we want to revive RARBG.
-  
-Join the Discord server: https://discord.gg/rQx6tZhP6W
