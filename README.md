@@ -1,23 +1,24 @@
-<img src="NQ-RARBG.png" style="width:300px;">
-
 # Not Quite RARBG
 
-Continuing the legacy of the OG RARBG.
-Current and active domains are:<br>
-[nq-rarbg.to](https://nq-rarbg.to/)<br>
-[nq-rarbg.slidemovies.org](https://nq-rarbg.slidemovies.org/).
+![Not Quite RARBG](NQ-RARBG.png)
 
-Want to help out? Check our [contributing guide](./CONTRIBUTING.md).
-<br>
-Couldn't be possible without: <https://www.reddit.com/r/PiratedGames/comments/13wjasv/comment/jmd5sbf/?utm_source=share&utm_medium=web2x&context=3>
+Continuing the legacy of the original RARBG, Not Quite RARBG aims to provide a comprehensive collection of torrents for movies, TV shows, anime, software, and games, following the unfortunate shutdown of the original site. Our goal is to offer the same level of quality and variety that made RARBG the greatest of all time.
 
-## About
+## Active Domains
+- [nq-rarbg.to](https://nq-rarbg.to/)
+- [nq-rarbg.slidemovies.org](https://nq-rarbg.slidemovies.org/)
 
-This website aims to provide **all** existing RARBG torrents for movies, TV shows, anime, software, and games, after the tragic news of the site's shutdown.<Br>
-After achieving this goal, the website will open registrations, so users can upload their own torrents. However, this will be under strict moderation to prevent the flow of malware.
+## How to Contribute
+If you would like to contribute to Not Quite RARBG, please refer to our [contributing guide](./CONTRIBUTING.md) for detailed instructions. Your help will be greatly appreciated in maintaining and expanding our collection of torrents.
 
-## Why
-  
-The whole community really misses the OG RARBG as it was the GOAT of torrent sites. As a community we want to revive RARBG.
-  
-Join the Discord server: https://discord.gg/rQx6tZhP6W
+## About Not Quite RARBG
+The purpose of this website is to fill the void left by the closure of the original RARBG. We strive to gather all existing RARBG torrents for various categories, including movies, TV shows, anime, software, and games. Once we have achieved this goal, we plan to open registrations, allowing users to upload their own torrents. However, to ensure the safety of our users, all uploads will be subject to strict moderation to prevent the distribution of malware.
+
+## Join the Community
+We understand the strong nostalgia and longing for the original RARBG within the community. We invite you to join our Discord server and be a part of the revival of RARBG. Together, we can recreate the spirit and experience that made it so beloved.
+
+Join the Discord server: [https://discord.gg/rQx6tZhP6W](https://discord.gg/rQx6tZhP6W)
+
+---
+
+Please note that piracy and copyright infringement are illegal activities. This repository and its contents are purely for educational, academic and archiving purposes. The owners and contributors are not responsible for ill-intended usage.
