@@ -88,9 +88,10 @@
             <i class="fas fa-search"></i>
             Search
           </button>
-          <button class="closed" onclick="if(this.classList.contains('closed')){this.innerHTML='&lt;&lt;';this.classList.remove('closed');this.classList.add('open');this.nextElementSibling.nextElementSibling.nextElementSibling.style.display='block';}else{this.innerHTML='&gt;&gt;';this.classList.remove('open');this.classList.add('closed');this.nextElementSibling.nextElementSibling.nextElementSibling.style.display='none';}return false;">&gt;&gt;</button>
+          <button class="closed" onclick="if(this.classList.contains('closed')){this.innerHTML='&lt;&lt;';this.classList.remove('closed');this.classList.add('open');document.getElementById('catList').style.display='block';}else{this.innerHTML='&gt;&gt;';this.classList.remove('open');this.classList.add('closed');document.getElementById('catList').style.display='none';}return false;">&gt;&gt;</button>
+          <p>You can also type in an IMDb ID.</p>
           <br><br>
-          <div style="display:none;text-align:left;">
+          <div style="display:none;text-align:left;" id="catList">
             <input type="radio" name="cat" id="radMovies">
             <label for="radMovies" class="one">
               <a href="/cat/movies/">Movies</a>
