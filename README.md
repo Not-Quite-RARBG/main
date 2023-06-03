@@ -17,7 +17,7 @@ The purpose of this website is to fill the void left by the closure of the origi
 ## Join the Community
 We understand the strong nostalgia and longing for the original RARBG within the community. We invite you to join our Divolt server and be a part of the revival of RARBG. Together, we can recreate the spirit and experience that made it so beloved.
 
-[(divolt.xyz/invite/pPJ20NFF)](https://divolt.xyz/invite/pPJ20NFF)
+[nqrarbg.divolt.xyz](https://nqrarbg.divolt.xyz)
 
 ---
 
