@@ -159,11 +159,13 @@
               <?php
               $pages = json_decode(file_get_contents($api_url."/search.php?"."key=$api_key"."&page=$page&query=".urlencode($_GET['q'])))->pages;
                 // Loop through the pages and generate a link for each one
-                for ($i = 1; $i <= $pages; $i++) {
+                for ($i = 1; $i <= $_GET['page'] * 10; $i++) {
                   $url = "?q=" . urlencode($_GET['q']) . "&page=" . $i;
                   $link_text = $i == 1 ? "<b>1</b>" : $i;
                   echo '<a href="' . $url . '" title="page ' . $i . '">' . $link_text . '</a> ';
                 }
+                $maxUrl = "?q=" . urlencode($_GET['q']) . "&page=" . $pages;
+                echo '<a href=\''.}.'\'>'.$pages.'</a>';
               ?>
             </div>
           </div>
