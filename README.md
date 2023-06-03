@@ -17,7 +17,7 @@ The purpose of this website is to fill the void left by the closure of the origi
 ## Join the Community
 We understand the strong nostalgia and longing for the original RARBG within the community. We invite you to join our Discord server and be a part of the revival of RARBG. Together, we can recreate the spirit and experience that made it so beloved.
 
-Join the Discord server: [https://discord.gg/rQx6tZhP6W](https://discord.gg/rQx6tZhP6W)
+(Dviolt Server)
 
 ---
 
