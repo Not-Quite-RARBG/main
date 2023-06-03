@@ -124,16 +124,19 @@
             echo '<th>IMDb ID:</th>';
             echo '<td>'.$jsonData->imdb_id.'</td>';
             echo '</tr>';
-        }
-        ?>
-        <?php
-        if ($jsonData->imdb_id) {
+          
             echo '<tr>';
             echo '<th>IMDb Score:</th>';
             echo '<td><span class="imdbRatingPlugin" data-user="ur134494520" data-title="'.$jsonData->imdb_id.'" data-style="p3"><a target="_blank" href="https://www.imdb.com/title/'.$jsonData->imdb_id.'/?ref_=plg_rt_1"><img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png" alt="IMDb Rating" /></a></span></td>';
             echo '</tr>';
+    
+            echo '
+            <tr>
+              <th>Download Subtitles: </th>
+              <td><button onclick="window.open(\'/getSubs.php?id='.$jsonData->imdb_id.'&e=1&s=1\');">Download</button></td>
+            </tr>';
         }
-        ?>
+        
           <tr>
             <th>Description:</th>
           <td>
