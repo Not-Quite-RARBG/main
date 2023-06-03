@@ -15,9 +15,9 @@ If you would like to contribute to Not Quite RARBG, please refer to our [contrib
 The purpose of this website is to fill the void left by the closure of the original RARBG. We strive to gather all existing RARBG torrents for various categories, including movies, TV shows, anime, software, and games. Once we have achieved this goal, we plan to open registrations, allowing users to upload their own torrents. However, to ensure the safety of our users, all uploads will be subject to strict moderation to prevent the distribution of malware.
 
 ## Join the Community
-We understand the strong nostalgia and longing for the original RARBG within the community. We invite you to join our Discord server and be a part of the revival of RARBG. Together, we can recreate the spirit and experience that made it so beloved.
+We understand the strong nostalgia and longing for the original RARBG within the community. We invite you to join our Divolt server and be a part of the revival of RARBG. Together, we can recreate the spirit and experience that made it so beloved.
 
-(Dviolt Server)
+[(divolt.xyz/invite/TC53ey9R)](https://divolt.xyz/invite/TC53ey9R)
 
 ---
 
