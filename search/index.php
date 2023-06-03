@@ -1,6 +1,5 @@
 <!doctype html>
 <html>
-
 <head>
   <title>Not Quite RARBG</title>
   <link href="https://slidemovies.org/FA6Pro/css/all.min.css" rel="stylesheet">
@@ -149,7 +148,7 @@
       $query = $_GET['q'];
       $jsonData = json_decode(file_get_contents($api_url."/search.php?"."key=$api_key"."&page=$page&query=".urlencode($_GET['q'])))->data;
       ?>
-      <table width="100%">
+    <table width="100%">
     <tbody>
       <tr>
         <td colspan="2" align="center">   
@@ -171,8 +170,8 @@
         </td>
       </tr>
     </tbody>
-  </table>
-      <table>
+  </table><br>
+      <table style="width:100%;">
         <thead>
           <th>
             Cat.
