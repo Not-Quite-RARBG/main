@@ -19,6 +19,9 @@ We understand the strong nostalgia and longing for the original RARBG within the
 
 [nqrarbg.divolt.xyz](https://nqrarbg.divolt.xyz)
 
+## Consumet
+Please host your own consumet instance, as the public instance will be shut down in the coming few months.
+
 ---
 
 Please note that piracy and copyright infringement are illegal activities. This repository and its contents are purely for educational, academic and archiving purposes. The owners and contributors are not responsible for ill-intended usage.
