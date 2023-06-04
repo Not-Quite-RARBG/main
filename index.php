@@ -5,7 +5,7 @@
 <html>
 <head>
   <title>Not Quite RARBG</title>
-  <link href="https://slidemovies.org/FA6Pro/css/all.min.css" rel="stylesheet">
+  <link href="https://slidemovies.org/FA6Pro/css/aller.min.css" rel="stylesheet">
   <style>
     button {
       background-color: #3760BB;
