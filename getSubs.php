@@ -1,6 +1,5 @@
 <?php
   require "config.php";
-  $tmdb_api_key = "7f43cb004071d31460301e2127f5fb41";
   $tmdb_response = json_decode(file_get_contents("https://api.themoviedb.org/3/find/$_GET[id]?api_key=$tmdb_api_key&external_source=imdb_id"));
   if (isset($tmdb_response->movie_results[0])) {
     $id = $tmdb_response->movie_results[0]->id;
