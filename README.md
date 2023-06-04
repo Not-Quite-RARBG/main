@@ -2,7 +2,7 @@
 
 ![Not Quite RARBG](NQ-RARBG.png)
 
-**WARNING: therarbg.com is not associated with this project, it is a fork, which is against the license, as it doesn't disclose the source. It also hosts malicious ads. We shall retaliate. We shall D D o S.**
+**WARNING: therarbg.com is not associated with this project, it is a fork, which is against the license, as it doesn't disclose the source. It also hosts malicious ads.**
 
 Continuing the legacy of the original RARBG, Not Quite RARBG aims to provide a comprehensive collection of torrents for movies, TV shows, anime, software, and games, following the unfortunate shutdown of the original site. Our goal is to offer the same level of quality and variety that made RARBG the greatest of all time.
 
