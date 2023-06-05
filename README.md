@@ -1,6 +1,6 @@
 # Not Quite RARBG
 
-![Not Quite RARBG](NQ-RARBG.png)
+![Not Quite RARBG](/img/logo_2.png)
 
 **WARNING: therarbg.com is not associated with this project, it is a fork, which is against the license, as it doesn't disclose the source. It also hosts malicious ads.**
 
