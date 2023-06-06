@@ -32,7 +32,7 @@ router.get('/', async (req, res, next) => {
 })
 
 // Get torrent
-router.get('torrent/:ext_id', async (req, res, next) => {
+router.get('/t/:ext_id', async (req, res, next) => {
   try {
     const torrent = await Item
       .find({ ext_id: req.params.ext_id })
@@ -59,7 +59,7 @@ router.get('/search/:search_title', async (req, res, next) => {
 })
 
 // List all categories
-router.get('/categories', async (req, res, next) => {
+router.get('/cat', async (req, res, next) => {
   try {
     const categories = await Item
       .find()
@@ -72,7 +72,7 @@ router.get('/categories', async (req, res, next) => {
 })
 
 // List torrents from specific categories
-router.get('/categories/:cat', async (req, res, next) => {
+router.get('/cat/:cat', async (req, res, next) => {
   try {
     const torrents = await Item
       .find({ cat: req.params.cat })
