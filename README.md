@@ -6,10 +6,7 @@
 
 Continuing the legacy of the original RARBG, Not Quite RARBG aims to provide a comprehensive collection of torrents for movies, TV shows, anime, software, and games, following the unfortunate shutdown of the original site. Our goal is to offer the same level of quality and variety that made RARBG the greatest of all time.
 
-## Active Domains
-
-- [nq-rarbg.to](https://nq-rarbg.to/)
-- [nqrarbg.to](https://nqrarbg.to)
+## [nq-rarbg.to](https://nq-rarbg.to/) (Currently offline, we'll be launching soon!)
 
 ## How to Contribute
 
