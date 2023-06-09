@@ -2,12 +2,7 @@ const mongoose = require('mongoose')
 const MongoPaging = require('mongo-cursor-pagination')
 
 const ItemSchema = new mongoose.Schema({
-  hash: {
-    type: String,
-    required: true,
-    unique: true
-  },
-  title: {
+  cat: {
     type: String,
     required: true
   },
@@ -15,21 +10,37 @@ const ItemSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  cat: {
-    type: String,
-    required: true
-  },
-  size: {
-    type: Number,
-    required: true
-  },
-  uploader: {
+  hash: {
     type: String,
     required: true
   },
   imdb: {
     type: String,
     required: false
+  },
+  size: {
+    type: Number,
+    required: true
+  },
+  title: {
+    type: String,
+    required: true
+  },
+  uploader: {
+    type: String,
+    required: true
+  },
+  leechers: {
+    type: Number,
+    required: true
+  },
+  seeders: {
+    type: Number,
+    required: true
+  },
+  desc: {
+    type: String,
+    required: true
   }
 })
 
@@ -38,9 +49,6 @@ ItemSchema.plugin(MongoPaging.mongoosePlugin)
 
 // Index for listing all torrents
 ItemSchema.index({ dt: 1, _id: 1 })
-
-// Index for full-text search (required for search to work)
-ItemSchema.index({ title: 'text', _id: 1 })
 
 // Index for listing all categories
 ItemSchema.index({ cat: 1, _id: 1 })

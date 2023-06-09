@@ -3,10 +3,12 @@ const bodyParser = require('body-parser')
 const cors = require('cors')
 const mongoose = require('mongoose')
 const dotenv = require('dotenv')
+const compression = require('compression')
 
 const homeRoutes = require('../routes/homeRoute')
 const searchRoutes = require('../routes/searchRoute')
 const catRoutes = require('../routes/catRoute')
+const itemRoute = require('../routes/itemRoute')
 
 const logger = require('../utils/logger')
 
@@ -26,11 +28,13 @@ mongoose
     const server = express()
     server.use(cors())
     server.use(bodyParser.json())
+    server.use(compression())
     server.set('json spaces', 1)
     // Routes
     server.use('/api', homeRoutes)
     server.use('/api', searchRoutes)
     server.use('/api', catRoutes)
+    server.use('/api', itemRoute)
     server.get('*', function (_req, res) {
       res.status(404).end()
     })

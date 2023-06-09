@@ -1,5 +1,4 @@
-const { express, morgan, accessLogStream, pageLimit } = require('./common')
-const Item = require('../models/Item')
+const { express, morgan, accessLogStream, typesense, pageLimit } = require('./common')
 const router = express.Router()
 const apicache = require('apicache')
 const logger = require('../utils/logger')
@@ -9,25 +8,43 @@ router.use(morgan('combined', { stream: accessLogStream }))
 // create cache middleware
 const cache = apicache.middleware
 
-// List torrents from specific categories
-router.get('/cat/:cat', cache('5 minutes'), async (req, res, next) => {
+router.get('/cat/:cat/page=:page', cache('5 minutes'), async (req, res, next) => {
   try {
-    const torrents = await Item
-      .paginate({
-        query: { cat: String(req.params.cat) },
-        limit: pageLimit,
-        paginatedField: 'dt',
-        next: req.query.next,
-        previous: req.query.previous
-      })
+    let page = Number(req.params.page)
+    const cat = req.params.cat
 
-    res.json({
-      results: torrents.results,
-      hasNext: torrents.hasNext,
-      next: torrents.next ? `/cat/${req.params.cat}?next=${torrents.next}` : null,
-      hasPrevious: torrents.hasPrevious,
-      previous: torrents.previous ? `/cat/${req.params.cat}?previous=${torrents.previous}` : null
-    })
+    if (!page || page < 1) {
+      page = 1
+    }
+
+    typesense.collections('items')
+      .documents()
+      .search({
+        q: '*',
+        filter_by: `cat:=${cat}`,
+        page: String(page),
+        per_page: pageLimit,
+        exhaustive_search: true,
+        cache: true
+      })
+      .then((response) => {
+        const hasNext = (page * pageLimit) < response.found
+        const hasPrevious = page > 1
+        res.json({
+          results: response.hits,
+          current_page: response.page,
+          total_hits: response.found,
+          pages_found: Math.ceil(response.found / pageLimit),
+          hasNext,
+          next: hasNext ? `/cat/${cat}/page=${page += 1}` : null,
+          hasPrevious,
+          previous: hasPrevious ? `/cat/${cat}/page=${page -= 1}` : null
+        })
+      })
+      .catch((error) => {
+        logger.log(error)
+        res.status(500).end('An error occurred while searching.')
+      })
   } catch (err) {
     next(err)
   }
