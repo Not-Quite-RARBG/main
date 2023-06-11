@@ -1,5 +1,4 @@
 const mongoose = require('mongoose')
-const MongoPaging = require('mongo-cursor-pagination')
 
 const ItemSchema = new mongoose.Schema({
   cat: {
@@ -43,9 +42,6 @@ const ItemSchema = new mongoose.Schema({
     required: true
   }
 })
-
-// Required for pagination
-ItemSchema.plugin(MongoPaging.mongoosePlugin)
 
 // Index for listing all torrents
 ItemSchema.index({ dt: 1, _id: 1 })

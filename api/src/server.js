@@ -4,7 +4,6 @@ const cors = require('cors')
 const mongoose = require('mongoose')
 const dotenv = require('dotenv')
 const compression = require('compression')
-
 const homeRoutes = require('../routes/homeRoute')
 const searchRoutes = require('../routes/searchRoute')
 const catRoutes = require('../routes/catRoute')

@@ -34,4 +34,11 @@ if (process.env.NODE_ENV === 'production') {
   accessLogStream = fs.createWriteStream(path.join(__dirname, 'access.log'), { flags: 'a' })
 }
 
-module.exports = { express, morgan, accessLogStream, typesense, pageLimit, validCategories }
+module.exports = {
+  express,
+  morgan,
+  accessLogStream,
+  typesense,
+  pageLimit,
+  validCategories
+}
