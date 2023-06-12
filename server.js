@@ -4,11 +4,11 @@ const cors = require('cors')
 const mongoose = require('mongoose')
 const dotenv = require('dotenv')
 const compression = require('compression')
-const homeRoutes = require('../routes/homeRoute')
-const searchRoutes = require('../routes/searchRoute')
-const catRoutes = require('../routes/catRoute')
-const itemRoute = require('../routes/itemRoute')
-const logger = require('../utils/logger')
+const homeRoutes = require('./api/routes/homeRoute')
+const searchRoutes = require('./api/routes/searchRoute')
+const catRoutes = require('./api/routes/catRoute')
+const itemRoute = require('./api/routes/itemRoute')
+const logger = require('./utils/logger')
 const PORT = process.env.PORT || 5000
 
 // Load env vars from .env file in development
@@ -57,4 +57,8 @@ process.on('uncaughtException', (err) => {
 
   // Exit process with failure
   process.exit(0)
+})
+
+process.on('SIGINT', function (err) {
+  process.exit(err ? 1 : 0)
 })

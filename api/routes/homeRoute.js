@@ -1,8 +1,7 @@
 const { express, morgan, accessLogStream, typesense, pageLimit, validCategories } = require('./common')
 const router = express.Router()
 const apicache = require('apicache')
-const logger = require('../utils/logger')
-// const niceBytes = require('../utils/utils')
+const logger = require('../../utils/logger')
 
 router.use(morgan('combined', { stream: accessLogStream }))
 

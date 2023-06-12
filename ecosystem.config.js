@@ -1,7 +1,7 @@
 module.exports = {
   apps: [{
     name: 'nq-rarbg',
-    script: 'src/server.js',
+    script: 'server.js',
 
     autorestart: true,
     watch: false,

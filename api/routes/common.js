@@ -15,7 +15,7 @@ const validCategories = [
   'movies_x264', 'movies_x264_3d', 'movies_x264_4k', 'movies_x264_720',
   'movies_x265', 'movies_x265_4k', 'movies_x265_4k_hdr', 'movies_xvid',
   'movies_xvid_720', 'music_flac', 'music_mp3', 'software_pc_iso',
-  'tv', 'tv_sd', 'tv_uhd', 'xxx'
+  'tv', 'tv_sd', 'tv_uhd', 'xxx', 'non-xxx'
 ]
 
 const typesense = new Typesense.Client({

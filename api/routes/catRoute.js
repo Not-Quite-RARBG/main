@@ -2,7 +2,7 @@ const { express, morgan, accessLogStream, typesense, pageLimit, validCategories 
 const router = express.Router()
 const apicache = require('apicache')
 const Item = require('../models/Item')
-const logger = require('../utils/logger')
+const logger = require('../../utils/logger')
 
 router.use(morgan('combined', { stream: accessLogStream }))
 
@@ -29,7 +29,13 @@ router.get('/cat/:cat/page=:page', cache('5 minutes'), async (req, res, next) =>
     const queryParams = new URLSearchParams(req.query).toString()
 
     let cat = ''
-    if (req.params.cat && validCategories.includes(req.params.cat)) { cat = `cat:=${req.params.cat}` }
+    if (req.params.cat && validCategories.includes(req.params.cat)) {
+      if (req.params.cat === 'non-xxx') {
+        cat = 'cat:!=xxx'
+      } else {
+        cat = `cat:=${req.params.cat}`
+      }
+    }
 
     if (!page || page < 1) {
       page = 1

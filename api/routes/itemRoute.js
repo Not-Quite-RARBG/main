@@ -2,7 +2,7 @@ const { express, morgan, accessLogStream } = require('./common')
 const Item = require('../models/Item')
 const router = express.Router()
 const apicache = require('apicache')
-const logger = require('../utils/logger')
+const logger = require('../../utils/logger')
 
 router.use(morgan('combined', { stream: accessLogStream }))
 
