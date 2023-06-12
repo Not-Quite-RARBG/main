@@ -37,6 +37,10 @@ const ItemSchema = new mongoose.Schema({
     type: Number,
     required: true
   },
+  completed: {
+    type: Number,
+    required: true
+  },
   desc: {
     type: String,
     required: true

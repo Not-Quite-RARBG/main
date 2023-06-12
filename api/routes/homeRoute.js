@@ -30,7 +30,7 @@ router.get('/page=:page', cache('5 minutes'), async (req, res, next) => {
     }
 
     let sortParams = ''
-    const validOrders = ['size', 'seeders', 'leechers']
+    const validOrders = ['timestamp', 'size', 'seeders', 'leechers']
 
     if (req.query.order && req.query.by) {
       if (validOrders.includes(req.query.order)) {

@@ -8,8 +8,8 @@ const homeRoutes = require('../routes/homeRoute')
 const searchRoutes = require('../routes/searchRoute')
 const catRoutes = require('../routes/catRoute')
 const itemRoute = require('../routes/itemRoute')
-
 const logger = require('../utils/logger')
+const PORT = process.env.PORT || 5000
 
 // Load env vars from .env file in development
 if (process.env.NODE_ENV !== 'production') {
@@ -42,8 +42,6 @@ mongoose
       logger.error(err.stack)
       res.status(500).send('Something broke!')
     })
-
-    const PORT = process.env.PORT || 5000
 
     server.listen(PORT, () => {
       logger.log(`Server is running on port ${PORT}`)

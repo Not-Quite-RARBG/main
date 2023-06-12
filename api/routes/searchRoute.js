@@ -32,7 +32,7 @@ router.get('/search/:search_title/page=:page', cache('5 minutes'), async (req, r
     }
 
     let sortParams = ''
-    const validOrders = ['size', 'seeders', 'leechers']
+    const validOrders = ['timestamp', 'size', 'seeders', 'leechers']
 
     if (req.query.order && req.query.by) {
       if (validOrders.includes(req.query.order)) {
@@ -67,7 +67,7 @@ router.get('/search/:search_title/page=:page', cache('5 minutes'), async (req, r
           hasNext,
           next: hasNext ? `/api/search/${query}/page=${response.page += 1}?${queryParams}` : null,
           hasPrevious,
-          previous: hasPrevious ? `/api/search/${query}/page=${response.page -= 2}?${queryParams}` : null
+          previous: hasPrevious ? `/api/search/${query}/page=${response.page -= 1}?${queryParams}` : null
         })
       })
       .catch((error) => {
