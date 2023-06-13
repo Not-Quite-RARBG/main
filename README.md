@@ -1,6 +1,6 @@
 # Not Quite RARBG
 
-![Not Quite RARBG](/img/logo_2.png)
+![Not Quite RARBG](/public/images/logo_2.png)
 
 Continuing the legacy of the original RARBG, Not Quite RARBG aims to provide a comprehensive collection of torrents for movies, TV shows, anime, software, and games, following the unfortunate shutdown of the original site. Our goal is to offer the same level of quality and variety that made RARBG the greatest of all time.
 

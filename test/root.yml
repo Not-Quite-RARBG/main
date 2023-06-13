@@ -1,0 +1,25 @@
+config:
+  target: "https://localhost:5000/api"
+  phases:
+    - duration: 60
+      arrivalRate: 10
+      name: Warm up
+    - duration: 120
+      arrivalRate: 10
+      rampTo: 100
+      name: Ramp up load
+    - duration: 600
+      arrivalRate: 100
+      name: Sustained load
+
+scenarios:
+  - name: "Search and Download"
+    flow:
+      - get:
+          url: "/search/starwars/page=1?filters=movies"
+          capture:
+            - json: "$.results[0].id"
+              as: "itemID"
+      - get:
+          url: "/t/{{ itemID }}"
+      - think: 5
