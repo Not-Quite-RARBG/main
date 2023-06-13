@@ -1,15 +1,14 @@
 const express = require('express')
-const bodyParser = require('body-parser')
 const cors = require('cors')
-const mongoose = require('mongoose')
-const dotenv = require('dotenv')
 const compression = require('compression')
+const mongoose = require('mongoose')
+const bodyParser = require('body-parser')
+const dotenv = require('dotenv')
 const homeRoutes = require('./api/routes/homeRoute')
 const searchRoutes = require('./api/routes/searchRoute')
 const catRoutes = require('./api/routes/catRoute')
 const itemRoute = require('./api/routes/itemRoute')
 const logger = require('./utils/logger')
-const PORT = process.env.PORT || 5000
 
 // Load env vars from .env file in development
 if (process.env.NODE_ENV !== 'production') {
@@ -17,6 +16,7 @@ if (process.env.NODE_ENV !== 'production') {
 } else {
   dotenv.config({ path: '.env.prod' })
 }
+const PORT = process.env.PORT || 5000
 
 // Connect to MongoDB
 mongoose
