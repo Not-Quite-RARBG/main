@@ -2,14 +2,12 @@
 
 ![Not Quite RARBG](/public/images/logo_2.png)
 
-**WARNING: therarbg.com is not associated with this project, it is a fork, which is against the license, as it doesn't disclose the source. It also hosts malicious ads.**
-
 Continuing the legacy of the original RARBG, Not Quite RARBG aims to provide a comprehensive collection of torrents for movies, TV shows, anime, software, and games, following the unfortunate shutdown of the original site. Our goal is to offer the same level of quality and variety that made RARBG the greatest of all time.
 
-## Active Domains
+**Currently offline, we'll be launching soon!**
 
+- [nqrarbg.to](https://nqrarbg.to/)
 - [nq-rarbg.to](https://nq-rarbg.to/)
-- [nqrarbg.to](https://nqrarbg.to)
 
 ## How to Contribute
 
