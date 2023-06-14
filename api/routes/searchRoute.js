@@ -53,7 +53,11 @@ router.get('/search/:search_title/page=:page', cache('5 minutes'), async (req, r
         cache: true
       })
       .then((response) => {
-        const documents = response.hits.map(hit => hit.document)
+        const documents = response.hits.map(hit => {
+          return {
+            ...hit.document
+          }
+        })
         const currentPage = response.page
         const totalPages = Math.ceil(response.found / pageLimit)
         const hasNext = (page * pageLimit) < response.found
