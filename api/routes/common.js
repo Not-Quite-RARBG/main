@@ -40,6 +40,5 @@ module.exports = {
   accessLogStream,
   typesense,
   pageLimit,
-  validCategories,
-  movieCategories
+  validCategories
 }
