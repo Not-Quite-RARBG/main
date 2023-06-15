@@ -4,18 +4,12 @@ const compression = require('compression')
 const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
 const dotenv = require('dotenv')
-const homeRoutes = require('./api/routes/homeRoute')
-const searchRoutes = require('./api/routes/searchRoute')
-const catRoutes = require('./api/routes/catRoute')
-const itemRoute = require('./api/routes/itemRoute')
 const logger = require('./utils/logger')
 
 // Load env vars from .env file in development
-if (process.env.NODE_ENV !== 'production') {
-  dotenv.config({ path: '.env' })
-} else {
-  dotenv.config({ path: '.env.prod' })
-}
+const envPath = process.env.NODE_ENV !== 'production' ? '.env' : '.env.prod'
+dotenv.config({ path: envPath })
+
 const PORT = process.env.PORT || 5000
 
 // Connect to MongoDB
@@ -30,10 +24,13 @@ mongoose
     server.use(compression())
     server.set('json spaces', 1)
     // Routes
-    server.use('/api', homeRoutes)
-    server.use('/api', searchRoutes)
-    server.use('/api', catRoutes)
-    server.use('/api', itemRoute)
+    const routes = [
+      '/home',
+      '/search',
+      '/cat',
+      '/item'
+    ]
+    server.use('/api', [...routes.map(route => require(`./api/routes${route}Route`))])
     server.get('*', function (_req, res) {
       res.status(404).end()
     })
