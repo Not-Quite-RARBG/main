@@ -12,7 +12,6 @@ router.get('/page=:page', cache('5 minutes'), async (req, res, next) => {
   try {
     const page = Number(req.params.page)
     const queryParams = new URLSearchParams(req.query).toString()
-
     const filters = req.query.filters
     let filterBy = ''
 
@@ -31,23 +30,23 @@ router.get('/page=:page', cache('5 minutes'), async (req, res, next) => {
     let sortParams = ''
     const validOrders = ['timestamp', 'size', 'seeders', 'leechers']
 
-    if (req.query.order && req.query.by) {
-      if (validOrders.includes(req.query.order)) {
-        sortParams = `,${req.query.order}:${req.query.by}`
-      }
+    if (req.query.order && req.query.by && validOrders.includes(req.query.order)) {
+      sortParams = `,${req.query.order}:${req.query.by}`
+    }
+
+    const searchOptions = {
+      q: '*',
+      filter_by: filterBy,
+      sort_by: `_eval(cat:!=xxx):desc ${sortParams}`,
+      page: String(page),
+      per_page: pageLimit,
+      exhaustive_search: true,
+      cache: true
     }
 
     typesense.collections('items')
       .documents()
-      .search({
-        q: '*',
-        filter_by: filterBy,
-        sort_by: `_eval(cat:!=xxx):desc ${sortParams}`,
-        page: String(page),
-        per_page: pageLimit,
-        exhaustive_search: true,
-        cache: true
-      })
+      .search(searchOptions)
       .then((response) => {
         const documents = response.hits.map(hit => hit.document)
         const currentPage = response.page
@@ -55,16 +54,18 @@ router.get('/page=:page', cache('5 minutes'), async (req, res, next) => {
         const hasNext = (page * pageLimit) < response.found
         const hasPrevious = page > 1
 
-        res.json({
+        const responseObj = {
           results: documents,
           current_page: currentPage,
           total_hits: response.found,
           pages_found: totalPages,
           hasNext,
-          next: hasNext ? `/api/page=${response.page += 1}?${queryParams}` : null,
+          next: hasNext ? `/api/page=${response.page + 1}?${queryParams}` : null,
           hasPrevious,
-          previous: hasPrevious ? `/api/page=${response.page -= 2}?${queryParams}` : null
-        })
+          previous: hasPrevious ? `/api/page=${response.page - 2}?${queryParams}` : null
+        }
+
+        res.json(responseObj)
       })
       .catch((error) => {
         logger.log(error)

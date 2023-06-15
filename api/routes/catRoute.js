@@ -12,10 +12,10 @@ const cache = apicache.middleware
 router.get('/cat', async (req, res, next) => {
   try {
     const categories = await Item.find().distinct('cat')
-    const formattedCategories = {}
-    categories.forEach((category, index) => {
-      formattedCategories[index + 1] = category
-    })
+    const formattedCategories = categories.reduce((obj, category, index) => {
+      obj[index + 1] = category
+      return obj
+    }, {})
     res.json(formattedCategories)
   } catch (error) {
     logger.log(error)
@@ -37,46 +37,47 @@ router.get('/cat/:cat/page=:page', cache('5 minutes'), async (req, res, next) =>
       }
     }
 
-    if (!page || page < 1) {
-      page = 1
-    }
+    page = page && page >= 1 ? page : 1
 
     let sortParams = ''
     const validOrders = ['timestamp', 'size', 'seeders', 'leechers']
 
-    if (req.query.order && req.query.by) {
-      if (validOrders.includes(req.query.order)) {
-        sortParams = `${req.query.order}:${req.query.by}`
-      }
+    if (req.query.order && req.query.by && validOrders.includes(req.query.order)) {
+      sortParams = `${req.query.order}:${req.query.by}`
+    }
+
+    const searchOptions = {
+      q: '*',
+      filter_by: cat,
+      sort_by: sortParams,
+      page: String(page),
+      per_page: pageLimit,
+      exhaustive_search: true,
+      cache: true
     }
 
     typesense.collections('items')
       .documents()
-      .search({
-        q: '*',
-        filter_by: cat,
-        sort_by: sortParams,
-        page: String(page),
-        per_page: pageLimit,
-        exhaustive_search: true,
-        cache: true
-      })
+      .search(searchOptions)
       .then((response) => {
         const documents = response.hits.map(hit => hit.document)
         const currentPage = response.page
         const totalPages = Math.ceil(response.found / pageLimit)
         const hasNext = (page * pageLimit) < response.found
         const hasPrevious = page > 1
-        res.json({
+
+        const responseObj = {
           results: documents,
           current_page: currentPage,
           total_hits: response.found,
           pages_found: totalPages,
           hasNext,
-          next: hasNext ? `/api/cat/${req.params.cat}/page=${page += 1}?${queryParams}` : null,
+          next: hasNext ? `/api/cat/${req.params.cat}/page=${page + 1}?${queryParams}` : null,
           hasPrevious,
-          previous: hasPrevious ? `/api/cat/${req.params.cat}/page=${page -= 2}?${queryParams}` : null
-        })
+          previous: hasPrevious ? `/api/cat/${req.params.cat}/page=${page - 2}?${queryParams}` : null
+        }
+
+        res.json(responseObj)
       })
       .catch((error) => {
         logger.log(error)

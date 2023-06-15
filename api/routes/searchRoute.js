@@ -12,10 +12,8 @@ const cache = apicache.middleware
 router.get('/search/:search_title/page=:page', cache('5 minutes'), async (req, res, next) => {
   try {
     const page = Number(req.params.page)
-
     const query = encodeURIComponent(req.params.search_title)
     const queryParams = new URLSearchParams(req.query).toString()
-
     const filters = req.query.filters
     let filterBy = ''
 
@@ -34,45 +32,43 @@ router.get('/search/:search_title/page=:page', cache('5 minutes'), async (req, r
     let sortParams = ''
     const validOrders = ['timestamp', 'size', 'seeders', 'leechers']
 
-    if (req.query.order && req.query.by) {
-      if (validOrders.includes(req.query.order)) {
-        sortParams = `,${req.query.order}:${req.query.by}`
-      }
+    if (req.query.order && req.query.by && validOrders.includes(req.query.order)) {
+      sortParams = `,${req.query.order}:${req.query.by}`
+    }
+
+    const searchOptions = {
+      q: req.params.search_title.replace(/ /g, '.'), // hehehe :)
+      query_by: 'title, cat, imdb, uploader',
+      filter_by: filterBy,
+      sort_by: `_eval(cat:!=xxx):desc ${sortParams}`,
+      page: String(page),
+      per_page: pageLimit,
+      exhaustive_search: true,
+      cache: true
     }
 
     typesense.collections('items')
       .documents()
-      .search({
-        q: req.params.search_title.replace(/ /g, '.'), // hehehe :)
-        query_by: 'title, cat, imdb, uploader',
-        filter_by: filterBy,
-        sort_by: `_eval(cat:!=xxx):desc ${sortParams}`,
-        page: String(page),
-        per_page: pageLimit,
-        exhaustive_search: true,
-        cache: true
-      })
+      .search(searchOptions)
       .then((response) => {
-        const documents = response.hits.map(hit => {
-          return {
-            ...hit.document
-          }
-        })
+        const documents = response.hits.map(hit => ({ ...hit.document }))
         const currentPage = response.page
         const totalPages = Math.ceil(response.found / pageLimit)
         const hasNext = (page * pageLimit) < response.found
         const hasPrevious = page > 1
 
-        res.json({
+        const responseObj = {
           results: documents,
           current_page: currentPage,
           total_hits: response.found,
           pages_found: totalPages,
           hasNext,
-          next: hasNext ? `/api/search/${query}/page=${response.page += 1}?${queryParams}` : null,
+          next: hasNext ? `/api/search/${query}/page=${response.page + 1}?${queryParams}` : null,
           hasPrevious,
-          previous: hasPrevious ? `/api/search/${query}/page=${response.page -= 1}?${queryParams}` : null
-        })
+          previous: hasPrevious ? `/api/search/${query}/page=${response.page - 1}?${queryParams}` : null
+        }
+
+        res.json(responseObj)
       })
       .catch((error) => {
         logger.log(error)
