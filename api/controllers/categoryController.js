@@ -1,6 +1,6 @@
 const Item = require('../models/Item')
 const logger = require('../../utils/logger')
-const { typesense, pageLimit, validCategories } = require('../routes/common')
+const { typesense, pageLimit, validCategories } = require('./common')
 
 const getCategories = async (req, res, next) => {
   try {
@@ -64,6 +64,7 @@ const getItemsByCategoryAndPage = async (req, res, next) => {
           current_page: currentPage,
           total_hits: response.found,
           pages_found: totalPages,
+          pages_max: 100000,
           hasNext,
           next: hasNext ? `/api/cat/${req.params.cat}/page=${page + 1}?${queryParams}` : null,
           hasPrevious,
