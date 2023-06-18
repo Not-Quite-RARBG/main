@@ -21,7 +21,7 @@ async function searchItems (req, res, next) {
     }
 
     let sortParams = ''
-    const validOrders = ['timestamp', 'size', 'seeders', 'leechers']
+    const validOrders = ['timestamp', 'size', 'seeders', 'leechers', 'completed']
 
     if (req.query.order && req.query.by && validOrders.includes(req.query.order)) {
       sortParams = `,${req.query.order}:${req.query.by}`
@@ -52,11 +52,10 @@ async function searchItems (req, res, next) {
           current_page: currentPage,
           total_hits: response.found,
           pages_found: totalPages,
-          pages_max: 100000,
           hasNext,
           next: hasNext ? `/api/page=${response.page + 1}?${queryParams}` : null,
           hasPrevious,
-          previous: hasPrevious ? `/api/page=${response.page - 2}?${queryParams}` : null
+          previous: hasPrevious ? `/api/page=${response.page - 1}?${queryParams}` : null
         }
 
         res.json(responseObj)

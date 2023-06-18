@@ -33,7 +33,7 @@ const getItemsByCategoryAndPage = async (req, res, next) => {
     page = page && page >= 1 ? page : 1
 
     let sortParams = ''
-    const validOrders = ['timestamp', 'size', 'seeders', 'leechers']
+    const validOrders = ['timestamp', 'size', 'seeders', 'leechers', 'completed']
 
     if (req.query.order && req.query.by && validOrders.includes(req.query.order)) {
       sortParams = `${req.query.order}:${req.query.by}`
@@ -64,11 +64,10 @@ const getItemsByCategoryAndPage = async (req, res, next) => {
           current_page: currentPage,
           total_hits: response.found,
           pages_found: totalPages,
-          pages_max: 100000,
           hasNext,
           next: hasNext ? `/api/cat/${req.params.cat}/page=${page + 1}?${queryParams}` : null,
           hasPrevious,
-          previous: hasPrevious ? `/api/cat/${req.params.cat}/page=${page - 2}?${queryParams}` : null
+          previous: hasPrevious ? `/api/cat/${req.params.cat}/page=${page - 1}?${queryParams}` : null
         }
 
         res.status(200).json(responseObj)

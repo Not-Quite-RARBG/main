@@ -23,7 +23,7 @@ const searchItemsByTitleAndPage = async (req, res, next) => {
     }
 
     let sortParams = ''
-    const validOrders = ['timestamp', 'size', 'seeders', 'leechers']
+    const validOrders = ['timestamp', 'size', 'seeders', 'leechers', 'completed']
 
     if (req.query.order && req.query.by && validOrders.includes(req.query.order)) {
       sortParams = `,${req.query.order}:${req.query.by}`
