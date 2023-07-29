@@ -23,7 +23,7 @@
     "express-async-errors": "^3.1.1",
     "luxon": "^3.3.0",
     "mongodb": "^5.6.0",
-    "mongoose": "^7.2.2",
+    "mongoose": "^7.3.3",
     "morgan": "^1.10.0",
     "pm2": "^5.3.0",
     "typesense": "^1.5.4"
